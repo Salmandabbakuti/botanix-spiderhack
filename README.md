@@ -48,23 +48,7 @@ npx hardhat vars set PRIVATE_KEY
 npx hardhat run scripts/deploy.ts --network <network>
 ```
 
-#### 2. Setup Contract Event Listener and Rasp Pi GPIO Simulator
-
-> Copy `.env.example` to `.env` and fill in the contract address from previous step and RPC URL.
-
-1. Install required dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-2. Run the event listener
-
-```bash
-python listener.py
-```
-
-#### 3. Starting Client
+#### 2. Starting Client
 
 > Copy `client/.env.example` to `client/.env` and fill in the deployed contract address and other required environment variables.
 
@@ -85,13 +69,47 @@ npm run dev
 
 3. Navigate to `http://localhost:3000` in your browser to see the client. Connect your wallet and start using the app.
 
+4. Register Device with the contract by clicking the "+ Device" button in the client interface.
+
+5. Load the control panel with registered device Id by entering device Id and click on arrow button.
+
+![usage_screen](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/78e0995b-e591-4278-8c0c-f6746cf54163)
+
+#### 3. Setup Contract Event Listener and Rasp Pi GPIO Simulator
+
+> Copy `.env.example` to `.env` and fill in the contract address and RPC URL.
+
+1. Install required dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the event listener
+
+```bash
+python listener.py
+```
+
+3. Enter the registered device Id in previous step when prompted.
+
+![listener_prompt](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/d67ab995-0ceb-4c37-9a76-db3d6473bce3)
+
 ## Usage
 
-1. Connect your wallet and ensure it has owner privileges on the contract.
+1. Connect your wallet to the client interface and register a device with the contract.
 
-2. Use the client interface to turn pins on or off.
+2. Load the control panel with registered device Id by entering device Id and click on arrow icon.
 
-3. The event listener will listen for events in the contract and simulate/update the GPIO pins on the Raspberry Pi.
+3. Start the event listener in new terminal and enter the registered device Id when prompted.
+
+4. Use the client interface to turn pins on or off.
+
+5. The event listener will listen for choosen device events in the contract and simulate/update the GPIO pins on the Raspberry Pi.
+
+![usage_screen](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/78e0995b-e591-4278-8c0c-f6746cf54163)
+
+![listener_prompt](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/d67ab995-0ceb-4c37-9a76-db3d6473bce3)
 
 ## Demo
 
