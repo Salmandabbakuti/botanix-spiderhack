@@ -11,8 +11,6 @@ load_dotenv()
 # Define the GPIO pins
 pinList = [14, 15, 18, 23, 24, 25, 8, 7, 12, 16, 20, 21, 2, 3, 4, 17, 27, 22, 10, 9, 11, 5, 6, 13, 19, 26]
 
-device_id = os.getenv("DEVICE_ID", 0)
-
 def setup_gpio_pins():
     # Set up GPIO pins
     GPIO.setmode(GPIO.BCM)
@@ -35,13 +33,13 @@ def main():
 
     # Get contract instance and event filter
     contract_instance = w3.eth.contract(address=contract_address, abi=abi)
-    event_filter = contract_instance.events.PinStatusChanged.create_filter(fromBlock="latest", argument_filters={"deviceId": int(device_id)})
+    device_id  = input("Enter the device id: ")
+    event_filter = contract_instance.events.DevicePinStatusChanged.create_filter(fromBlock="latest", argument_filters={"deviceId": int(device_id)})
 
     # Initialize GPIO pins
     setup_gpio_pins()
 
-    print("Listening for PinStatusChanged events...")
-
+    print(f"Listening for DevicePinStatusChanged events for device {device_id}")
     # Loop to listen for events
     while True:
         for event in event_filter.get_new_entries():
