@@ -15,6 +15,7 @@ Raspi Connect leverages the power of Raspberry Pi's GPIO pins to control home de
 - Windows 8+ (for simulating GPIO pins)
 - [Windows Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) - Only for Windows (Simulating GPIO pins on Windows)
 - [Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/) (for actual GPIO pins)
+- Some Botanix Testnet BTC (for deploying contract and interacting with the client) - https://faucet.botanixlabs.dev/
 
 ### Steps
 
@@ -73,7 +74,7 @@ npm run dev
 
 5. Load the control panel with registered device Id by entering device Id and click on arrow button.
 
-![usage_screen](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/78e0995b-e591-4278-8c0c-f6746cf54163)
+![usage_screen](https://github.com/Salmandabbakuti/botanix-spiderhack/assets/29351207/0febb21a-af83-449e-9e42-2ae2b1794e5d)
 
 #### 3. Setup Contract Event Listener and Rasp Pi GPIO Simulator
 
@@ -93,7 +94,7 @@ python listener.py
 
 3. Enter the registered device Id in previous step when prompted.
 
-![listener_prompt](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/d67ab995-0ceb-4c37-9a76-db3d6473bce3)
+![listener_prompt](https://github.com/Salmandabbakuti/botanix-spiderhack/assets/29351207/8f1458df-0212-4d67-a87e-04e05e4c1522)
 
 ## Usage
 
@@ -107,14 +108,17 @@ python listener.py
 
 5. The event listener will listen for choosen device events in the contract and simulate/update the GPIO pins on the Raspberry Pi.
 
-![usage_screen](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/78e0995b-e591-4278-8c0c-f6746cf54163)
+![usage_screen](https://github.com/Salmandabbakuti/botanix-spiderhack/assets/29351207/0febb21a-af83-449e-9e42-2ae2b1794e5d)
 
-![listener_prompt](https://github.com/Salmandabbakuti/depin-bnb-hack/assets/29351207/d67ab995-0ceb-4c37-9a76-db3d6473bce3)
+![listener_prompt](https://github.com/Salmandabbakuti/botanix-spiderhack/assets/29351207/8f1458df-0212-4d67-a87e-04e05e4c1522)
 
 ## Demo
 
+![Screen1](https://github.com/Salmandabbakuti/botanix-spiderhack/assets/29351207/8551311e-6bd7-4011-8dd2-7b5a3eaac4b3)
+
 ## Built With
 
+- [Botanix Labs](https://docs.botanixlabs.xyz/botanix-labs/) - Botanix Labs aims to establish a fully decentralized EVM-equivalent Layer 2 on Bitcoin, combining the security of Bitcoin's Proof-of-Work with a Proof-of-Stake consensus model using Spiderchain
 - [Hardhat](https://hardhat.org/) - Ethereum development environment for compiling, testing, deploying, and interacting with smart contracts
 - [Solidity](https://docs.soliditylang.org/en/v0.8.24/) - Ethereum's smart contract programming language
 - [Web3.py](https://web3py.readthedocs.io/en/stable/) - Python library for interacting with Ethereum blockchain
