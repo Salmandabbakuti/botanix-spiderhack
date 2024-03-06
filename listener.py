@@ -26,7 +26,7 @@ def main():
     # abi = '[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint8","name":"pin","type":"uint8"},{"indexed":false,"internalType":"enum PinController.PinStatus","name":"status","type":"uint8"}],"name":"PinStatusChanged","type":"event"}]'
     # Get contract address and RPC URL from environment variables
     rpc_url = os.getenv("RPC_URL", "https://node.botanixlabs.dev")
-    contract_address = Web3.to_checksum_address(os.getenv("CONTRACT_ADDRESS", "0xF35ADe64F4963bE9E9bCd895bE84719A997e81D3"))
+    contract_address = Web3.to_checksum_address(os.getenv("CONTRACT_ADDRESS", "0x877F246235E872AcD79F455033730F475694EB09"))
 
     # Initialize web3.py instance
     w3 = Web3(HTTPProvider(rpc_url))
