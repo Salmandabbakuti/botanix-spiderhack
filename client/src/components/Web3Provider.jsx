@@ -30,7 +30,7 @@ export default function Web3Provider({ children }) {
       autoConnect={true}
       clientId={clientId}
       dAppMeta={{
-        name: "IOT Botanix",
+        name: "Raspi Controller",
         description:
           "Decentralized Smart Home IOT with Raspberry Pi and Blockchain",
         logoUrl: "https://example.com/logo.png",

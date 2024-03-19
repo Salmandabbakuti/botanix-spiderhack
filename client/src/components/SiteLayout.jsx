@@ -19,7 +19,7 @@ export default function SiteLayout({ children }) {
           alignItems: "center"
         }}
       >
-        <h3>IOT Botanix</h3>
+        <h3>Raspi Controller</h3>
         <div style={{ display: "flex", alignItems: "center" }}>
           <ConnectWallet
             theme={"light"} // light | dark

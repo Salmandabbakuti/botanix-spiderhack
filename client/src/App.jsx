@@ -280,7 +280,7 @@ function App() {
                 fontSize: "1.5em"
               }}
             >
-              Raspi Connect
+              Raspi Controller
             </p>
           </h1>
           <h2>
