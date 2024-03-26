@@ -6,6 +6,8 @@ Raspi Controller leverages the power of Raspberry Pi's GPIO pins to control home
 
 ### Architecture
 
+![botanix-iot-drawio](https://github.com/Salmandabbakuti/botanix-spiderhack/assets/29351207/91eac3c8-5de8-4890-8359-f61cc998c2be)
+
 ## Getting Started
 
 ### Prerequisites
